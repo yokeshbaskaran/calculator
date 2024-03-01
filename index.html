@@ -1,0 +1,96 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Calculator App</h2>
+      <div id="calcultor-app">
+        <form id="calcultor-form">
+          <div id="display-text">
+            <input type="text" name="uservalue" />
+          </div>
+
+          <div>
+            <input type="button" value="AC" onclick='uservalue.value = "" ' />
+            <input
+              type="button"
+              value="DEL"
+              onclick="uservalue.value = uservalue.value.toString().slice(0,-1)"
+            />
+            <input
+              type="button"
+              value="."
+              onclick='uservalue.value += "." '
+              class="operators"
+            />
+            <input
+              type="button"
+              value="/"
+              onclick='uservalue.value += "/" '
+              class="operators"
+            />
+          </div>
+
+          <div>
+            <input type="button" value="7" onclick='uservalue.value += "7" ' />
+            <input type="button" value="8" onclick='uservalue.value += "8" ' />
+            <input type="button" value="9" onclick='uservalue.value += "9" ' />
+            <input
+              type="button"
+              value="*"
+              onclick='uservalue.value += "*" '
+              class="operators"
+            />
+          </div>
+
+          <div>
+            <input type="button" value="4" onclick='uservalue.value += "4" ' />
+            <input type="button" value="5" onclick='uservalue.value += "5" ' />
+            <input type="button" value="6" onclick='uservalue.value += "6" ' />
+            <input
+              type="button"
+              value="-"
+              onclick='uservalue.value += "-" '
+              class="operators"
+            />
+          </div>
+
+          <div>
+            <input type="button" value="1" onclick='uservalue.value += "1" ' />
+            <input type="button" value="2" onclick='uservalue.value += "2" ' />
+            <input type="button" value="3" onclick='uservalue.value += "3" ' />
+            <input
+              type="button"
+              value="+"
+              onclick='uservalue.value += "+" '
+              class="operators"
+            />
+          </div>
+
+          <div>
+            <input
+              type="button"
+              value="000"
+              onclick='uservalue.value += "000" '
+            />
+            <input
+              type="button"
+              value="00"
+              onclick='uservalue.value += "00" '
+            />
+            <input type="button" value="0" onclick='uservalue.value += "0" ' />
+            <input
+              type="button"
+              value="="
+              onclick="uservalue.value = eval(uservalue.value)"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
